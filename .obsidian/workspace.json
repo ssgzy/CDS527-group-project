@@ -14,12 +14,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "文档/项目总览.md",
+                "file": "输出/README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "项目总览"
+              "title": "README"
             }
           }
         ]
@@ -112,7 +112,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "文档/项目总览.md",
+                "file": "输出/README.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +122,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "项目总览 的反向链接列表"
+              "title": "README 的反向链接列表"
             }
           },
           {
@@ -200,6 +200,7 @@
   },
   "active": "e4ef8ea6c5b505a6",
   "lastOpenFiles": [
+    "文档/项目总览.md",
     "README.md",
     "工作区/Group_X_PPT_outline.md",
     "工作区/work_distribution.docx",
@@ -208,7 +209,6 @@
     "文档/当前状态.md",
     "CDS527",
     "LingNan_University_CDS527",
-    "文档/项目总览.md",
     "文档/任务笔记 - 阅读作业要求.md",
     "文档/任务笔记 - Task1 内容梳理.md",
     "输出/reports/report_s4_deep_analysis.txt",
