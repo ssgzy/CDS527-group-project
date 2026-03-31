@@ -1,0 +1,19 @@
+=== Section 2 — OVR-SVC (OneVsRest + LinearSVC) ===
+
+macro-F1    : 0.3142
+weighted-F1 : 0.8766
+accuracy    : 0.8910
+train time  : 129.7s
+
+Per-class report:
+              precision    recall  f1-score   support
+
+    surprise       0.33      0.17      0.22         6
+       angry       0.80      0.27      0.40        15
+     disgust       0.00      0.00      0.00         3
+       happy       0.92      0.97      0.95       238
+         sad       0.00      0.00      0.00         4
+
+    accuracy                           0.89       266
+   macro avg       0.41      0.28      0.31       266
+weighted avg       0.88      0.89      0.88       266

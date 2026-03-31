@@ -1,0 +1,19 @@
+=== Section 2 — CNB (Complement NaiveBayes) ===
+
+macro-F1    : 0.3332
+weighted-F1 : 0.8455
+accuracy    : 0.8158
+train time  : 1.0s
+
+Per-class report:
+              precision    recall  f1-score   support
+
+    surprise       0.06      0.17      0.09         6
+       angry       0.57      0.53      0.55        15
+     disgust       0.00      0.00      0.00         3
+       happy       0.95      0.87      0.91       238
+         sad       0.08      0.25      0.12         4
+
+    accuracy                           0.82       266
+   macro avg       0.33      0.36      0.33       266
+weighted avg       0.88      0.82      0.85       266

@@ -1,0 +1,36 @@
+=== Section 1 — Baseline: TF-IDF (unigram) + LogisticRegression ===
+
+Pipeline:
+  clean_text → RegexTokenizer(pattern=\W, minTokenLength=2)
+  → StopWordsRemover → CountVectorizer(vocabSize=10000, minDF=2)
+  → IDF(minDocFreq=2) → LogisticRegression(maxIter=100, regParam=0.1, family=multinomial)
+
+Split: stratified 80/20, seed=42  |  Train: 1032  |  Test: 266
+
+--- Metrics ---
+macro-F1    : 0.2337   ← primary metric
+weighted-F1 : 0.8590
+accuracy    : 0.8985
+
+--- Per-class Report ---
+              precision    recall  f1-score   support
+
+    surprise       0.00      0.00      0.00         6
+       angry       0.67      0.13      0.22        15
+     disgust       0.00      0.00      0.00         3
+       happy       0.90      1.00      0.95       238
+         sad       0.00      0.00      0.00         4
+
+    accuracy                           0.90       266
+   macro avg       0.31      0.23      0.23       266
+weighted avg       0.84      0.90      0.86       266
+
+--- Interpretation ---
+- accuracy=90% is inflated: model nearly always predicts "happy" (89% of data)
+- Only "angry" is partially detected (F1=0.22); surprise/disgust/sad are all 0
+- macro-F1=0.2337 is the true multi-class performance baseline
+- This is the reference point for all subsequent improvement experiments
+
+Note: LR optimizer (OWLQN) emitted NaNHistory warnings during training.
+This indicates some numerical instability but did not block convergence.
+Possible cause: IDF feature scale. May improve with regParam tuning in Section 4.

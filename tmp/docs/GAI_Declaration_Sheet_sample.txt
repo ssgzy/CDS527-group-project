@@ -1,0 +1,33 @@
+GAI Declaration Sheet 
+Project Submission
+	•	Course / Project: CDSXXXX: Big Data Analytics
+	•	Submission Type (tick / indicate): ☐ Code ☐ Report ☐ PPT ☐ Other: __________
+	•	Group Number: 1
+
+GAI Declaration (Group)
+We, the Group Members listed below, declare that Generative AI tool(s) have been used to prepare the submitted work for the project [code|report|PPT]: CDSXXXX: Big Data Analytics.
+Description of use (optional but recommended):
+	•	Tool(s) used: ____________________________________________
+	•	Purpose / tasks assisted (e.g., brainstorming, code suggestions, editing, summarizing): 
+
+	•	Parts of submission affected (e.g., Task 1, Appendix, code module): 
+
+
+Group Members
+Member 1
+	•	Name: Chan Tai Man (Chinese Name: ____________)
+	•	Student ID: XXXXXXXXX
+	•	Major: __________________________
+	•	Signature: _______________________ Date: ____ / ____ / ______
+Member 2
+	•	Name: ____________________________ (Chinese Name: ____________)
+	•	Student ID: _______________________
+	•	Major: ____________________________
+	•	Signature: _______________________ Date: ____ / ____ / ______
+
+…. (continue for the rest of the members)
+
+Note
+	•	Your team may submit one single declaration sheet if all group members have used Generative AI during the project.
+	•	If only some members used Generative AI, you may either (a) state clearly which members used it in the “Description of use” section, or (b) submit individual declarations as required by your course.
+

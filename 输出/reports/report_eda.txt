@@ -1,0 +1,28 @@
+=== EDA Summary: SMILE Twitter Emotion Dataset ===
+
+Total records (after dedup): 1298
+Columns: tweetid, text, emotions
+
+--- Label Distribution ---
+  0.0  surprise      35  (2.7%)
+  1.0  angry         57  (4.4%)
+  2.0  disgust       13  (1.0%)
+  3.0  happy       1156  (89.1%)
+  4.0  sad           37  (2.9%)
+
+--- Word Count Stats ---
+  min=2, max=26, mean=14.09, median=15, std=5.21
+
+--- Per-class Word Count Mean ---
+  surprise    12.23
+  angry       16.35
+  disgust     16.54
+  happy       13.92
+  sad         16.78
+
+--- Text Noise Features ---
+  URL            591  (45.5%)
+  @Mention      1298  (100.0%)
+  #Hashtag       478  (36.8%)
+  Non-ASCII      103  (7.9%)
+  &amp;          114  (8.8%)

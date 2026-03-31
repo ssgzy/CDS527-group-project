@@ -1,0 +1,19 @@
+=== Section 2 — RF (Random Forest (numTrees=100)) ===
+
+macro-F1    : 0.1889
+weighted-F1 : 0.8450
+accuracy    : 0.8947
+train time  : 5.4s
+
+Per-class report:
+              precision    recall  f1-score   support
+
+    surprise       0.00      0.00      0.00         6
+       angry       0.00      0.00      0.00        15
+     disgust       0.00      0.00      0.00         3
+       happy       0.89      1.00      0.94       238
+         sad       0.00      0.00      0.00         4
+
+    accuracy                           0.89       266
+   macro avg       0.18      0.20      0.19       266
+weighted avg       0.80      0.89      0.85       266
