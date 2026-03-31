@@ -92,13 +92,13 @@
 | 3 | CountVectorizer |
 | 4 | Word2Vec |
 
-**Part B（需要外部资源，实现复杂度较高）：**
-| # | 特征表示 |
-|---|---------|
-| 5 | GloVe |
-| 6 | BERT embedding |
+**Part B（可选，超出当前核心实验矩阵范围，本次 Task 1 不纳入）：**
+| # | 特征表示 | 状态 |
+|---|---------|------|
+| 5 | GloVe | ❌ 不纳入（需外部权重，超出 PySpark 原生主线） |
+| 6 | BERT embedding | ❌ 不纳入（需外部预训练模型，超出 PySpark 原生主线） |
 
-> 注意：Part B 的 GloVe 和 BERT embedding 需要外部预训练权重，与 PySpark 集成方式需单独设计
+> Part B 可在报告"局限性与未来方向"中提及，但不作为正式对比实验
 
 ### Section 4 — Improvement, Deep Analysis, and High-Score Add-ons
 
@@ -128,13 +128,13 @@
   - `OneVsRest`, `LinearSVC`, `MultilayerPerceptronClassifier`
 - 启动方式：`conda run -n CDS527` 或激活 CDS527 环境后运行 Jupyter
 
-## 建议实验矩阵（对应 PySpark.png）
-1. **Section 1**：TF-IDF + LR（baseline）
-2. **Section 2**：TF-IDF + {LR, Complement NaiveBayes, Decision Tree, Random Forest, OneVsRest+LinearSVC}
-3. **Section 3A**：LR + {TF-IDF unigram, TF-IDF 1,2-gram, CountVectorizer, Word2Vec}
-4. **Section 3B**（可选，需外部资源）：LR + {GloVe, BERT}
-5. **Section 4A**：改进方法（清洗、类别不平衡、调参）
-6. **Section 4B**：深度分析（混淆矩阵、per-class 指标、ablation）
+## 实验矩阵执行结果（对应 PySpark.png）
+1. **Section 1**：TF-IDF + LR（baseline）→ macro-F1=0.2337 ✅
+2. **Section 2**：TF-IDF + {LR, CNB, DT, RF, OVR-SVC}→ 最优 CNB=0.3332 ✅
+3. **Section 3A**：LR + {TF-IDF unigram, TF-IDF 1,2-gram, CountVectorizer, Word2Vec}→ 固定 LR 下 BOW 系列无差异 ✅
+4. **Section 3B**：❌ 不纳入（GloVe/BERT 超出 PySpark 原生主线范围）
+5. **Section 4A**：LR + 逆频率类别权重，regParam 调参 → 最优 LR+Weight rp=0.5，macro-F1=0.3453 ✅
+6. **Section 4B**：混淆矩阵、per-class 指标、最难混淆对、训练时间 vs 性能 ✅
 
 ## 建议实验记录字段
 - `experiment_id`
@@ -149,15 +149,15 @@
 - `notes`
 
 ## 完成判定清单
-- 已说明数据、标签、任务和实验口径
-- 已实现至少一个 baseline
-- 已完成多模型比较
-- 已完成多特征表示比较
-- 已完成超参数调优并记录最佳结果
-- 已完成 EDA 与可视化
-- 已完成至少一组 baseline 改进实验
-- 已给出最终结果对比表
-- 已写出少于 300 字的总结说明
+- ✅ 已说明数据、标签、任务和实验口径
+- ✅ 已实现至少一个 baseline（TF-IDF + LR，macro-F1=0.2337）
+- ✅ 已完成多模型比较（5 种分类器，Section 2）
+- ✅ 已完成多特征表示比较（4 种表示方法，Section 3A）
+- ✅ 已完成超参数调优并记录最佳结果（regParam 5 值调参，Section 4A）
+- ✅ 已完成 EDA 与可视化（fig1–fig5，EDA 报告）
+- ✅ 已完成至少一组 baseline 改进实验（LR + 类别权重，Section 4A）
+- ✅ 已给出最终结果对比表（Notebook Section 9，输出/data/ CSV）
+- ✅ 已写出少于 300 字的总结说明（Notebook Section 9，298 词）
 
 ## 硬性约束
 - 代码必须以 PySpark 为主
@@ -165,26 +165,11 @@
 - 整个项目必须使用同一套 evaluation metric
 - 不能把大量核心实现写成标准 Python 后再包装成 Notebook
 
-## 当前可直接开展的内容
-- 清洗并理解当前 CSV 的字段和标签分布
-- 先设计 PySpark Notebook 的章节骨架
-- 先确定一组 PySpark 优先的 baseline 与候选模型
-- 先定义需要记录的实验表格字段
-
-## 当前仍待确认的内容
-- 老师指定的 standardized data split 是什么
-- 老师指定的 evaluation metric 是什么
-- 是否允许在 PySpark 主体下接入外部 embedding 结果
-- 数据说明文档与实际 CSV 条数不一致的原因
-
-## 建模注意点
-- 当前数据是 5 类情绪分类任务，且类别明显不平衡，见 [[数据说明]]
-- 文档给出的部分模型示例不一定直接适配 PySpark 多分类场景，选型时要验证可行性
-- 如果使用复杂 embedding，必须确保最终呈现仍符合“PySpark 为主”的评分要求
-
-## 当前结论
-- Task 1 至少需要覆盖“数据理解 + 基线 + 模型比较 + 特征比较 + 调参 + 可视化 + 改进实验 + 简短总结”这 8 个部分
-- 当前最合理的下一步不是直接写最终 Notebook，而是先确认 split 和 metric，并把 Notebook 骨架、实验矩阵与记录模板定下来
+## 最终结论（2026-03-31）
+- Task 1 所有 8 个必做内容已全部完成 ✅
+- Notebook `Group_X.code.ipynb` Section 0–9 全部就绪
+- 最优系统：LR + TF-IDF unigram + 逆频率类别权重（regParam=0.5），macro-F1=**0.3453**
+- 关键发现：类别不平衡处理（类别权重）比特征表示选择更有效；accuracy 在此数据集上完全不可信
 
 ## 相关链接
 - [[项目总览]]
