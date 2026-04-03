@@ -171,6 +171,17 @@
 - 最优系统：LR + TF-IDF unigram + 逆频率类别权重（regParam=0.5），macro-F1=**0.3453**
 - 关键发现：类别不平衡处理（类别权重）比特征表示选择更有效；accuracy 在此数据集上完全不可信
 
+## 2026-04-01 文件审计结论
+- `工作区/Group_X.code.ipynb` 已包含 Section 0–9，Task 1 主线结构完整
+- `输出/figures/`、`输出/reports/`、`输出/data/` 中已存在与 S1–S4 对应的图表、报告和 CSV
+- 当前保存的 Notebook 未保留 `execution_count` 和 cell outputs，说明现版本更像“干净源文件”而不是“已运行成品”
+- `工作区/Group_X_PPT_outline.md` 中部分 Task 1 数值与正式结果不一致：
+  - Section 2 中 DT / OVR-SVC 数值偏低
+  - Section 3 中 Word2Vec 被误写为 0.2337，正式结果为 0.1889
+  - Section 4 中多组 LR+Weight 调参结果与 `results_s4_improvement.csv` 不一致
+- 如果老师要求直接打开 Notebook 查看运行结果，建议在最终提交前重新运行并保存一份带输出版本
+- 从实验内容角度看，Task 1 已完成；从交付封装角度看，仍需做最终一致性检查
+
 ## 相关链接
 - [[项目总览]]
 - [[当前状态]]

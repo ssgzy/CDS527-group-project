@@ -27,7 +27,9 @@
 
 ## 当前目标
 - **Task 1 Notebook 主线实验全部完成** ✅
-- 待完成：`Group_X.report.docx`（Task 2 case study）、`Group_X.present.pptx`、`Group_X.gai.docx`、`work_distribution.docx`
+- **Task 2 / 合规文档主体已完成**：`Group_X.report.docx`、`Group_X.gai.docx`、`work_distribution.docx` ✅
+- 待完成：`Group_X.present.pptx` 正式幻灯片文件
+- 待确认：是否需要将 `Group_X.code.ipynb` 重新执行并以带输出状态保存
 
 ## 执行总纲（Step 进度）
 | Step | 内容 | 状态 |
