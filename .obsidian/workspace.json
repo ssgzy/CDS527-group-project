@@ -6,7 +6,6 @@
       {
         "id": "b3e89bc13c21446f",
         "type": "tabs",
-        "dimension": 58.47457627118644,
         "children": [
           {
             "id": "e4ef8ea6c5b505a6",
@@ -14,29 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "输出/README.md",
+                "file": "文档/项目总览.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
-            }
-          }
-        ]
-      },
-      {
-        "id": "2885e625087417ac",
-        "type": "tabs",
-        "dimension": 41.52542372881356,
-        "children": [
-          {
-            "id": "b250ee18253fe64f",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "关系图谱"
+              "title": "项目总览"
             }
           }
         ]
@@ -112,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "文档/项目总览.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "反向链接"
+              "title": "项目总览 的反向链接列表"
             }
           },
           {
@@ -197,15 +180,18 @@
       "bases:新建数据库": false
     }
   },
-  "active": "b250ee18253fe64f",
+  "active": "e4ef8ea6c5b505a6",
   "lastOpenFiles": [
+    "文档/问题与坑点.md",
+    "输出/README.md",
+    "Text_Classification_and_Google_Strategic_Audit.pptx",
+    "CDS527.pptx",
     "文档/Task2 报告草稿.md",
     "文档/Task2 下一步.md",
     "文档/Task2 论点素材.md",
     "文档/Task2 报告结构.md",
     "文档/任务笔记 - Task2 Google Case.md",
     "文档/Overall Summary 素材.md",
-    "输出/README.md",
     "文档/项目总览.md",
     "README.md",
     "工作区/Group_X_PPT_outline.md",
@@ -223,8 +209,6 @@
     "输出/figures/fig8_s4_improvement.png",
     "输出/reports/report_s4_summary.txt",
     "输出/data/results_s4_improvement.csv",
-    "输出/reports/report_s4_CNB.txt",
-    "输出/reports/report_s4_LR_weight_rp1.0.txt",
     "输出/figures/fig7_s3_repr_comparison.png",
     "文档/结论层级汇总.md",
     "输出/figures/fig6_s2_model_comparison.png",
@@ -236,7 +220,6 @@
     "文档/实验协议.md",
     "文档/常用命令.md",
     "CLAUDE.md",
-    "文档/问题与坑点.md",
     "文档/项目规范 - 执行流程.md",
     "文档/下一步.md"
   ]
