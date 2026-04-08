@@ -1,6 +1,6 @@
 # 任务笔记 - Task2 Google Case
 
-> 最后更新：2026-04-04
+> 最后更新：2026-04-08
 > 关联：[[Task2 报告结构]] | [[Task2 论点素材]] | [[Task2 下一步]] | [[当前状态]]
 
 ---
@@ -84,3 +84,10 @@ Case 文本直接描述以下核心挑战：
 - [x] Step 5c：Section 3 Proposed Solution 段落（2026-04-04）
 - [x] Step 5d：Section 4 Critical Evaluation 段落（2026-04-04）
 - [x] Step 5e：Section 5 Conclusion 段落（2026-04-04）
+- [x] Step 6：生成 `工作区/Group_X.report.docx`（2026-04-04）
+- [x] Step 7：生成正式 PPT（根目录 `CDS527.pptx` / `Text_Classification_and_Google_Strategic_Audit.pptx`，2026-04-04）
+
+## 2026-04-08 审计备注
+- Task 2 实体交付物已经生成，但部分过程文档仍停留在“Task 2 启动”或“PPT 未生成”的旧状态
+- 当前需要补的是文档同步，而不是继续补写 Task 2 正文内容
+- 后续如果确认确实使用了 Claude Code 辅助完成后期文稿或 PPT，需同步修正 GAI 声明
