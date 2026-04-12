@@ -1,0 +1,61 @@
+CDS527 Big Data Analytics — Generative AI Declaration
+Group Project, Term 2 2025-2026
+Group Members
+Name
+Student ID
+Email
+ZEPENG GU
+3162110
+zepenggu@ln.hk
+ZHEN ZHANG
+3162005
+zhenzhang6@ln.hk
+MING GAO
+3161831
+minggao3@ln.hk
+ZHENXIAO YANG
+3162134
+zhenxiaoyang@ln.hk
+NWANKWO Udoka
+3161611
+udokanwankwo2@ln.hk
+KAIWEN LIU
+3162172
+kaiwenliu@LN.hk
+WENHAO CHEN
+3352521
+wenhaochen@ln.hk
+
+Use of Generative AI Tools
+This group declares that Generative AI (GAI) tools were used during the preparation of this project. Specifically, ChatGPT (OpenAI GPT-4) was used for the following purposes:
+Assisting with the analysis and interpretation of experimental results.
+Providing recommendations on machine learning model selection and configuration (e.g., suggesting the use of Complement Naive Bayes for imbalanced multi-class classification, and inverse-frequency class weighting for Logistic Regression).
+Reviewing and suggesting improvements to written explanations in the report and notebook.
+
+All code was written and executed by group members. The GAI tool was not used to write PySpark code directly; it was consulted as a reference for understanding algorithm options and interpreting outputs. All AI-assisted content has been reviewed, verified, and integrated by the group.
+No GAI tool was used to generate raw data, fabricate experimental results, or replace independent academic thinking. This declaration is made in accordance with the Lingnan University Academic Integrity Policy.
+Signatures
+Name
+Signature
+Date
+ZEPENG GU
+
+
+ZHEN ZHANG
+
+
+MING GAO
+
+
+ZHENXIAO YANG
+
+
+NWANKWO Udoka
+
+
+KAIWEN LIU
+
+
+WENHAO CHEN
+
+
