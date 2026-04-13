@@ -56,12 +56,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "二次核对项目/PPT大纲-修订版-含文件映射.md",
+                "file": "文档/Task2 报告结构.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "PPT大纲-修订版-含文件映射"
+              "title": "Task2 报告结构"
             }
           }
         ],
@@ -155,7 +155,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "二次核对项目/PPT大纲-修订版-含文件映射.md",
+                "file": "文档/Task2 报告结构.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -165,7 +165,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "PPT大纲-修订版-含文件映射 的反向链接列表"
+              "title": "Task2 报告结构 的反向链接列表"
             }
           },
           {
@@ -244,11 +244,11 @@
   },
   "active": "11ec4366524ea75a",
   "lastOpenFiles": [
+    "二次核对项目/PPT大纲-修订版-含文件映射.md",
     "~$CDS527.pptx",
     "picture/Generated Image April 13, 2026 - 2_56PM.jpg",
     "picture",
     "输出/README.md",
-    "二次核对项目/PPT大纲-修订版-含文件映射.md",
     "文档/任务笔记 - Task1 补做实验.md",
     "文档/结果索引.md",
     "文档/Overall Summary 素材.md",
@@ -265,7 +265,6 @@
     "输出/sections/section4_improvement/report_s4_ablation_A3.txt",
     "输出/sections/section4_improvement/report_s4_ablation_A2.txt",
     "输出/sections/section4_improvement/report_s4_ablation_A1.txt",
-    "输出/sections/section4_improvement/report_s4_ablation_A0.txt",
     "输出/sections/section4_improvement/fig12_s4_ablation.png",
     "输出/sections/section4_improvement/fig10_per_class_and_time.png",
     "输出/sections/section4_improvement/fig9_confusion_matrix.png",
