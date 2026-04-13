@@ -1,0 +1,19 @@
+=== Section 4B — Ablation: Light cleaning only ===
+
+macro-F1    : 0.4465
+weighted-F1 : 0.9009
+accuracy    : 0.8910
+train time  : 3.5s
+
+Per-class report:
+              precision    recall  f1-score   support
+
+    surprise     0.2500    0.6667    0.3636         6
+       angry     0.9000    0.6000    0.7200        15
+     disgust     0.0000    0.0000    0.0000         3
+       happy     0.9612    0.9370    0.9489       238
+         sad     0.1667    0.2500    0.2000         4
+
+    accuracy                         0.8910       266
+   macro avg     0.4556    0.4907    0.4465       266
+weighted avg     0.9189    0.8910    0.9009       266

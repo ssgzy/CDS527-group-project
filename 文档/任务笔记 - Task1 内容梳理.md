@@ -92,13 +92,13 @@
 | 3 | CountVectorizer |
 | 4 | Word2Vec |
 
-**Part B（可选，超出当前核心实验矩阵范围，本次 Task 1 不纳入）：**
+**Part B（后续已补做，作为追加实验保留在 Notebook 底部）：**
 | # | 特征表示 | 状态 |
 |---|---------|------|
-| 5 | GloVe | ❌ 不纳入（需外部权重，超出 PySpark 原生主线） |
-| 6 | BERT embedding | ❌ 不纳入（需外部预训练模型，超出 PySpark 原生主线） |
+| 5 | GloVe | ✅ 已补做 |
+| 6 | BERT embedding | ✅ 已补做 |
 
-> Part B 可在报告"局限性与未来方向"中提及，但不作为正式对比实验
+> 为保持原 Notebook 主线结构不变，Part B 与 Section 4 缺失项作为 `Section 10 — Supplementary Experiments (Appended)` 追加在 Notebook 最底部。
 
 ### Section 4 — Improvement, Deep Analysis, and High-Score Add-ons
 
@@ -130,11 +130,13 @@
 
 ## 实验矩阵执行结果（对应 PySpark.png）
 1. **Section 1**：TF-IDF + LR（baseline）→ macro-F1=0.2337 ✅
-2. **Section 2**：TF-IDF + {LR, CNB, DT, RF, OVR-SVC}→ 最优 CNB=0.3332 ✅
-3. **Section 3A**：LR + {TF-IDF unigram, TF-IDF 1,2-gram, CountVectorizer, Word2Vec}→ 固定 LR 下 BOW 系列无差异 ✅
-4. **Section 3B**：❌ 不纳入（GloVe/BERT 超出 PySpark 原生主线范围）
-5. **Section 4A**：LR + 逆频率类别权重，regParam 调参 → 最优 LR+Weight rp=0.5，macro-F1=0.3453 ✅
-6. **Section 4B**：混淆矩阵、per-class 指标、最难混淆对、训练时间 vs 性能 ✅
+2. **Section 2**：TF-IDF + {LR, CNB, DT, RF, OVR-SVC} → 最优 CNB=0.3332 ✅
+3. **Section 3A**：LR + {TF-IDF unigram, TF-IDF 1,2-gram, CountVectorizer, Word2Vec} → 固定 LR 下 BOW 系列无差异 ✅
+4. **Section 3B**：`GloVe + LR = 0.3312`，`BERT embedding + LR = 0.3420` ✅
+5. **Section 4A**：LR + 逆频率类别权重，regParam 调参 → 原主线最优 LR+Weight rp=0.5，macro-F1=0.3453 ✅
+6. **Section 4A Optional**：`MLP + Word2Vec = 0.1885` ✅
+7. **Section 4B**：混淆矩阵、per-class 指标、最难混淆对、训练时间 vs 性能 ✅
+8. **Section 4B Ablation**：最优 `A4 Light cleaning only = 0.4465` ✅
 
 ## 建议实验记录字段
 - `experiment_id`
@@ -156,6 +158,7 @@
 - ✅ 已完成超参数调优并记录最佳结果（regParam 5 值调参，Section 4A）
 - ✅ 已完成 EDA 与可视化（fig1–fig5，EDA 报告）
 - ✅ 已完成至少一组 baseline 改进实验（LR + 类别权重，Section 4A）
+- ✅ 已补做官方路线图缺项（Section 3 Part B、MLP + Word2Vec、ablation study）
 - ✅ 已给出最终结果对比表（Notebook Section 9，输出/data/ CSV）
 - ✅ 已写出少于 300 字的总结说明（Notebook Section 9，298 词）
 
@@ -165,11 +168,16 @@
 - 整个项目必须使用同一套 evaluation metric
 - 不能把大量核心实现写成标准 Python 后再包装成 Notebook
 
-## 最终结论（2026-03-31）
+## 当前结论（2026-04-13）
 - Task 1 所有 8 个必做内容已全部完成 ✅
-- Notebook `Group_X.code.ipynb` Section 0–9 全部就绪
-- 最优系统：LR + TF-IDF unigram + 逆频率类别权重（regParam=0.5），macro-F1=**0.3453**
-- 关键发现：类别不平衡处理（类别权重）比特征表示选择更有效；accuracy 在此数据集上完全不可信
+- 官方路线图此前缺失的项目也已补做完成 ✅
+- Notebook `Group_X.code.ipynb` 保留原 Section 0–9 主线，并在最底部追加 `Section 10 — Supplementary Experiments (Appended)`
+- **当前全项目最优系统**：`A4 Light cleaning only + TF-IDF + class weight + Logistic Regression (regParam=0.5)`，macro-F1=**0.4465**
+- 原主线最优系统仍是：`LR + TF-IDF unigram + class weight (regParam=0.5)`，macro-F1=**0.3453**
+- 关键发现：
+  - 类别不平衡处理（class weight）确实重要
+  - `BERT` 提升了 accuracy，但并不是最佳 macro-F1 方案
+  - 这次真正把主指标进一步拉高的，是 **ablation 暴露出的更轻文本清洗策略**
 
 ## 2026-04-01 文件审计结论
 - `工作区/Group_X.code.ipynb` 已包含 Section 0–9，Task 1 主线结构完整
@@ -232,6 +240,37 @@
 - 你**做了相关处理但不能说成“单独测试过”**：
   - `fine-grained text cleaning`
   - 原因：你有统一文本清洗流程，但没有把不同清洗策略作为独立实验变量去比较
+
+## 2026-04-13 补做后更新
+
+### 本次新增完成项
+- `Section 3 Part B`
+  - `GloVe + LR` ✅
+  - `BERT embedding + LR` ✅
+- `Section 4 Part A`
+  - `Optional MLP + Word2Vec` ✅
+- `Section 4 Part B`
+  - `Ablation study` ✅
+
+### 当前路线图状态
+- 现在已经不能再说“有些项没做”
+- 更准确的说法是：
+  - **官方路线图列出的实验项已经全部覆盖**
+  - 但需要区分：
+    - `Section 1–9` 是原主线 Notebook
+    - `Section 10` 是为避免打乱原结构而在尾部追加的补做实验
+
+### 当前最值得引用的新结论
+- `BERT embedding + LR`
+  - `macro-F1 = 0.3420`
+  - `accuracy = 0.9323`
+- `MLP + Word2Vec`
+  - `macro-F1 = 0.1885`
+  - 没有带来增益
+- `A4 Light cleaning only`
+  - `macro-F1 = 0.4465`
+  - 已超过此前的 `0.3453`
+  - 应作为当前最终最优配置
 
 ## 相关链接
 - [[项目总览]]

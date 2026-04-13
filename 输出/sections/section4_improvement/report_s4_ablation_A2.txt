@@ -1,0 +1,19 @@
+=== Section 4B — Ablation: No stopword removal ===
+
+macro-F1    : 0.3530
+weighted-F1 : 0.8627
+accuracy    : 0.8459
+train time  : 3.4s
+
+Per-class report:
+              precision    recall  f1-score   support
+
+    surprise     0.1667    0.3333    0.2222         6
+       angry     0.6667    0.4000    0.5000        15
+     disgust     0.0000    0.0000    0.0000         3
+       happy     0.9432    0.9076    0.9251       238
+         sad     0.0769    0.2500    0.1176         4
+
+    accuracy                         0.8459       266
+   macro avg     0.3707    0.3782    0.3530       266
+weighted avg     0.8865    0.8459    0.8627       266

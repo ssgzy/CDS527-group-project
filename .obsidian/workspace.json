@@ -14,12 +14,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "文档/项目总览.md",
+                "file": "文档/任务笔记 - Task1 内容梳理.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "项目总览"
+              "title": "任务笔记 - Task1 内容梳理"
             }
           },
           {
@@ -28,12 +28,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "二次核对项目/Baseline 选择与适配性.md",
+                "file": "文档/Overall Summary 素材.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Baseline 选择与适配性"
+              "title": "Overall Summary 素材"
             }
           }
         ],
@@ -127,7 +127,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "二次核对项目/Baseline 选择与适配性.md",
+                "file": "文档/Overall Summary 素材.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -137,7 +137,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Baseline 选择与适配性 的反向链接列表"
+              "title": "Overall Summary 素材 的反向链接列表"
             }
           },
           {
@@ -215,51 +215,51 @@
   },
   "active": "77771af3079541d0",
   "lastOpenFiles": [
-    "二次核对项目/sanity_check_baseline.ipynb",
-    "~$Text_Classification_and_Google_Strategic_Audit.pptx",
-    "二次核对项目/sanity_check_summary.md",
-    "输出/sanity_check/sanity_check_metrics.csv",
-    "输出/sanity_check/balanced_confusion_matrix.png",
-    "输出/sanity_check/baseline_confusion_matrix.png",
-    "输出/sanity_check/split_distribution.csv",
-    "输出/sanity_check/split_distribution.png",
-    "输出/sanity_check",
-    "二次核对项目/__pycache__/sanity_check_baseline.cpython-313.pyc",
-    "二次核对项目/__pycache__",
-    "二次核对项目/sanity_check_baseline.py",
-    "二次核对项目/二次核对项目 - 主文档.md",
+    "文档/结果索引.md",
+    "输出/README.md",
+    "输出/sections/README.md",
+    "输出/sections/section4_improvement/README.md",
+    "输出/sections/section3_representation/README.md",
+    "输出/sections/section2_model_comparison/README.md",
+    "输出/sections/section1_baseline/README.md",
+    "输出/sections/section4_improvement/results_s4_ablation.csv",
+    "输出/sections/section4_improvement/results_s4_optional_mlp_word2vec.csv",
+    "输出/sections/section4_improvement/results_s4_improvement.csv",
+    "输出/sections/section4_improvement/report_s4_ablation_summary.txt",
+    "输出/sections/section4_improvement/report_s4_ablation_A4.txt",
+    "输出/sections/section4_improvement/report_s4_ablation_A3.txt",
+    "输出/sections/section4_improvement/report_s4_ablation_A2.txt",
+    "输出/sections/section4_improvement/report_s4_ablation_A1.txt",
+    "输出/sections/section4_improvement/report_s4_ablation_A0.txt",
+    "输出/sections/section4_improvement/report_s4_MLP_word2vec.txt",
+    "输出/sections/section4_improvement/fig12_s4_ablation.png",
+    "输出/sections/section4_improvement/fig10_per_class_and_time.png",
+    "输出/sections/section4_improvement/fig9_confusion_matrix.png",
+    "输出/sections/section4_improvement/fig8_s4_improvement.png",
+    "输出/sections/section3_representation/fig11_s3b_embeddings.png",
+    "输出/sections/section3_representation/fig7_s3_repr_comparison.png",
+    "输出/sections/section2_model_comparison/fig6_s2_model_comparison.png",
+    "输出/tables/per_class_f1_selected_models.md",
+    "输出/tables/official_roadmap_status.md",
+    "输出/tables/macro_f1_ranking.md",
+    "输出/tables/overall_experiment_metrics.md",
+    "输出/figures/fig12_s4_ablation.png",
+    "输出/figures/fig11_s3b_embeddings.png",
+    "文档/任务笔记 - Task1 补做实验.md",
+    "输出/fig6_s2_model_comparison.png",
+    "文档/Task2 报告草稿.md",
     "二次核对项目/Baseline 选择与适配性.md",
+    "文档/任务笔记 - Task1 内容梳理.md",
+    "文档/项目总览.md",
+    "二次核对项目/sanity_check_summary.md",
+    "二次核对项目/二次核对项目 - 主文档.md",
     "文档/当前状态.md",
     "二次核对项目/PPT 与 Report 需补充说明.md",
     "二次核对项目/可复现性与产物同步.md",
     "二次核对项目/数据版本与标签分布复核.md",
     "二次核对项目/流程设计复核.md",
-    "二次核对项目",
-    "tmp/ppt_ocr/slide5.png",
-    "tmp/ppt_ocr/slide6.png",
-    "tmp/ppt_ocr/slide10.png",
-    "tmp/ppt_ocr/slide9.png",
-    "tmp/ppt_ocr/slide8.png",
-    "tmp/ppt_ocr/slide7.png",
-    "tmp/ppt_ocr",
-    "tmp/docs/work_distribution.txt",
-    "文档/项目总览.md",
     "文档/问题与坑点.md",
-    "输出/README.md",
-    "文档/Task2 报告草稿.md",
     "文档/Task2 下一步.md",
-    "文档/Task2 论点素材.md",
-    "文档/Task2 报告结构.md",
-    "文档/任务笔记 - Task2 Google Case.md",
-    "文档/Overall Summary 素材.md",
-    "README.md",
-    "工作区/Group_X_PPT_outline.md",
-    "文档/任务笔记 - 阅读作业要求.md",
-    "文档/任务笔记 - Task1 内容梳理.md",
-    "输出/figures/fig10_per_class_and_time.png",
-    "文档/结论层级汇总.md",
-    "文档/实验协议.md",
-    "文档/常用命令.md",
-    "CLAUDE.md"
+    "文档/Task2 论点素材.md"
   ]
 }

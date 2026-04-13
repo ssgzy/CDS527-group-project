@@ -1,0 +1,5 @@
+Section 3B — Embedding Comparison Summary
+=========================================
+short                            display  macro_f1  weighted_f1  accuracy  train_sec
+   R6 BERT embedding (bert-base-uncased)  0.342038     0.909174  0.932331        5.8
+   R5               GloVe (twitter-100d)  0.331198     0.888644  0.913534        2.3

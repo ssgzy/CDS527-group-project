@@ -1,0 +1,19 @@
+=== Section 3B — GloVe (twitter-100d) + LogisticRegression ===
+
+macro-F1    : 0.3312
+weighted-F1 : 0.8886
+accuracy    : 0.9135
+train time  : 2.3s
+
+Per-class report:
+              precision    recall  f1-score   support
+
+    surprise     0.3333    0.1667    0.2222         6
+       angry     0.8333    0.3333    0.4762        15
+     disgust     0.0000    0.0000    0.0000         3
+       happy     0.9222    0.9958    0.9576       238
+         sad     0.0000    0.0000    0.0000         4
+
+    accuracy                         0.9135       266
+   macro avg     0.4178    0.2992    0.3312       266
+weighted avg     0.8796    0.9135    0.8886       266

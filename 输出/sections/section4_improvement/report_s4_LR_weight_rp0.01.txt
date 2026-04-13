@@ -1,0 +1,14 @@
+Section 4A — LR + Class Weights (regParam=0.01)
+macro-F1=0.3313  weighted-F1=0.8412  accuracy=0.8120  time=8.0s
+
+              precision    recall  f1-score   support
+
+    surprise       0.08      0.33      0.13         6
+       angry       0.83      0.33      0.48        15
+     disgust       0.00      0.00      0.00         3
+       happy       0.94      0.87      0.90       238
+         sad       0.10      0.25      0.14         4
+
+    accuracy                           0.81       266
+   macro avg       0.39      0.36      0.33       266
+weighted avg       0.89      0.81      0.84       266

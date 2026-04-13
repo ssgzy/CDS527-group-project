@@ -1,0 +1,15 @@
+Section 4A — Improvement Summary (sorted by macro-F1)
+============================================================
+Best S4 model : LR+Weight (rp=0.5)  macro-F1=0.3453
+
+            display  macro_f1  weighted_f1  accuracy  train_sec
+ LR+Weight (rp=0.5)  0.345307     0.840762  0.804511        3.7
+LR+Weight (rp=0.05)  0.337503     0.843750  0.815789        6.2
+ LR+Weight (rp=1.0)  0.334864     0.839582  0.800752        3.2
+ CNB (S2 reference)  0.333238     0.845481  0.815789        1.0
+ LR+Weight (rp=0.1)  0.333092     0.842166  0.812030        4.6
+LR+Weight (rp=0.01)  0.331346     0.841162  0.812030        8.0
+
+Reference:
+S1 Baseline (LR, no weight) : macro-F1=0.2337
+S2 Best     (CNB, default)  : macro-F1=0.3332

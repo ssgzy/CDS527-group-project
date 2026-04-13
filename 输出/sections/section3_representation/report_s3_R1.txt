@@ -1,0 +1,19 @@
+=== Section 3 — R1: TF-IDF (unigram) ===
+
+macro-F1    : 0.2337
+weighted-F1 : 0.8590
+accuracy    : 0.8985
+train time  : 9.5s
+
+Per-class:
+              precision    recall  f1-score   support
+
+    surprise       0.00      0.00      0.00         6
+       angry       0.67      0.13      0.22        15
+     disgust       0.00      0.00      0.00         3
+       happy       0.90      1.00      0.95       238
+         sad       0.00      0.00      0.00         4
+
+    accuracy                           0.90       266
+   macro avg       0.31      0.23      0.23       266
+weighted avg       0.84      0.90      0.86       266

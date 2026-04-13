@@ -1,0 +1,19 @@
+=== Section 4A — Optional MLP + Word2Vec ===
+
+macro-F1    : 0.1885
+weighted-F1 : 0.8432
+accuracy    : 0.8910
+train time  : 20.1s
+
+Per-class report:
+              precision    recall  f1-score   support
+
+    surprise     0.0000    0.0000    0.0000         6
+       angry     0.0000    0.0000    0.0000        15
+     disgust     0.0000    0.0000    0.0000         3
+       happy     0.8943    0.9958    0.9423       238
+         sad     0.0000    0.0000    0.0000         4
+
+    accuracy                         0.8910       266
+   macro avg     0.1789    0.1992    0.1885       266
+weighted avg     0.8002    0.8910    0.8432       266

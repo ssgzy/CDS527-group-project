@@ -1,0 +1,2 @@
+display,macro_f1,weighted_f1,accuracy,train_sec
+MLP + Word2Vec (dim=100),0.18846918489065606,0.843151616616093,0.8909774436090225,20.1

@@ -1,0 +1,9 @@
+=== Section 3: Representation Comparison (Fixed: LogisticRegression) ===
+
+ID   Representation                macro-F1  weighted-F1  accuracy  time(s)
+------------------------------------------------------------------------
+R1   TF-IDF (unigram)                0.2337       0.8590    0.8985      9.5
+R2   TF-IDF (1,2-gram)               0.2337       0.8590    0.8985     13.1
+R3   CountVectorizer (no IDF)        0.2337       0.8590    0.8985      6.2
+R4   Word2Vec (dim=100)              0.1889       0.8450    0.8947      8.0
+------------------------------------------------------------------------

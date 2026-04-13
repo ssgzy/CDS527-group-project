@@ -1,0 +1,32 @@
+Section 4B — Deep Analysis: LR+Weight (rp=0.5)
+============================================================
+
+macro-F1=0.3453
+
+Per-class metrics:
+Emotion       Precision   Recall       F1   Support
+surprise         0.0909   0.3333   0.1429         6
+angry            0.7000   0.4667   0.5600        15
+disgust          0.0000   0.0000   0.0000         3
+happy            0.9444   0.8571   0.8987       238
+sad              0.0833   0.2500   0.1250         4
+
+Confusion Matrix (counts, rows=True, cols=Predicted):
+             surprise     angry   disgust     happy       sad
+surprise            2         0         0         2         2
+angry               1         7         1         5         1
+disgust             0         0         0         3         0
+happy              18         3         5       204         8
+sad                 1         0         0         2         1
+
+Hardest misclassification pairs:
+  True=happy      -> Predicted=surprise    count=18
+  True=happy      -> Predicted=sad         count=8
+  True=happy      -> Predicted=disgust     count=5
+  True=angry      -> Predicted=happy       count=5
+  True=happy      -> Predicted=angry       count=3
+  True=disgust    -> Predicted=happy       count=3
+  True=surprise   -> Predicted=sad         count=2
+  True=surprise   -> Predicted=happy       count=2
+  True=sad        -> Predicted=happy       count=2
+  True=sad        -> Predicted=surprise    count=1

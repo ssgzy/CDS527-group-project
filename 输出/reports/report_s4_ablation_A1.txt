@@ -1,0 +1,19 @@
+=== Section 4B — Ablation: No class weight ===
+
+macro-F1    : 0.2367
+weighted-F1 : 0.8617
+accuracy    : 0.9023
+train time  : 4.1s
+
+Per-class report:
+              precision    recall  f1-score   support
+
+    surprise     0.0000    0.0000    0.0000         6
+       angry     1.0000    0.1333    0.2353        15
+     disgust     0.0000    0.0000    0.0000         3
+       happy     0.9015    1.0000    0.9482       238
+         sad     0.0000    0.0000    0.0000         4
+
+    accuracy                         0.9023       266
+   macro avg     0.3803    0.2267    0.2367       266
+weighted avg     0.8630    0.9023    0.8617       266

@@ -1,0 +1,6 @@
+short,display,text_col,remove_stopwords,use_idf,use_class_weight,regParam,macro_f1,weighted_f1,accuracy,train_sec
+A4,Light cleaning only,light_cleaned,True,True,True,0.5,0.4465145067698259,0.9008594988438214,0.8909774436090225,3.5
+A2,No stopword removal,cleaned,False,True,True,0.5,0.352984562847266,0.8626566258194928,0.8458646616541353,3.4
+A0,Full best (clean + stopwords + TF-IDF + class weight),cleaned,True,True,True,0.5,0.3453071113908118,0.8407616744819886,0.8045112781954887,3.1
+A3,No IDF,cleaned,True,False,True,0.5,0.3453071113908118,0.8407616744819886,0.8045112781954887,3.1
+A1,No class weight,cleaned,True,True,False,0.5,0.23670025779235998,0.8616643554045649,0.9022556390977443,4.1
