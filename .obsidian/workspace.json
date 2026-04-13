@@ -49,9 +49,23 @@
               "icon": "lucide-file",
               "title": "README"
             }
+          },
+          {
+            "id": "11ec4366524ea75a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "二次核对项目/PPT大纲-修订版-含文件映射.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "PPT大纲-修订版-含文件映射"
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       },
       {
         "id": "a0965c3aa78c0e19",
@@ -141,7 +155,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "输出/README.md",
+                "file": "二次核对项目/PPT大纲-修订版-含文件映射.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -151,7 +165,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "README 的反向链接列表"
+              "title": "PPT大纲-修订版-含文件映射 的反向链接列表"
             }
           },
           {
@@ -214,7 +228,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 268.5
+    "width": 268.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -227,10 +242,14 @@
       "bases:新建数据库": false
     }
   },
-  "active": "0508391a08dc0914",
+  "active": "11ec4366524ea75a",
   "lastOpenFiles": [
-    "文档/任务笔记 - Task1 补做实验.md",
+    "~$CDS527.pptx",
+    "picture/Generated Image April 13, 2026 - 2_56PM.jpg",
+    "picture",
     "输出/README.md",
+    "二次核对项目/PPT大纲-修订版-含文件映射.md",
+    "文档/任务笔记 - Task1 补做实验.md",
     "文档/结果索引.md",
     "文档/Overall Summary 素材.md",
     "输出/sections/README.md",
@@ -247,7 +266,6 @@
     "输出/sections/section4_improvement/report_s4_ablation_A2.txt",
     "输出/sections/section4_improvement/report_s4_ablation_A1.txt",
     "输出/sections/section4_improvement/report_s4_ablation_A0.txt",
-    "输出/sections/section4_improvement/report_s4_MLP_word2vec.txt",
     "输出/sections/section4_improvement/fig12_s4_ablation.png",
     "输出/sections/section4_improvement/fig10_per_class_and_time.png",
     "输出/sections/section4_improvement/fig9_confusion_matrix.png",
@@ -261,7 +279,6 @@
     "输出/tables/overall_experiment_metrics.md",
     "输出/figures/fig12_s4_ablation.png",
     "输出/figures/fig11_s3b_embeddings.png",
-    "输出/fig6_s2_model_comparison.png",
     "文档/Task2 报告草稿.md",
     "二次核对项目/Baseline 选择与适配性.md",
     "文档/任务笔记 - Task1 内容梳理.md",
@@ -272,8 +289,6 @@
     "二次核对项目/PPT 与 Report 需补充说明.md",
     "二次核对项目/可复现性与产物同步.md",
     "二次核对项目/数据版本与标签分布复核.md",
-    "二次核对项目/流程设计复核.md",
-    "文档/问题与坑点.md",
-    "文档/Task2 下一步.md"
+    "二次核对项目/流程设计复核.md"
   ]
 }
