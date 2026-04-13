@@ -3,64 +3,48 @@
 ## 项目基本信息
 - 项目名称：CDS527 Group Assignment
 - 项目根目录：`/Users/sam/Documents/Documents - sam的MacBook Pro/LU课程资料/CDS527 Big Data Analytics Language Models/CDS527 group project`
-- 执行环境：conda `CDS527`（Python 3.10.19，PySpark 3.1.2，JupyterLab 4.5.3）
-- 当前核心输入：
-  - `Group_Project_2026_T2 .docx`（作业说明）
-  - `GAI Declaration Sheet (sample).docx`
-  - `Google.docx`（Task 2 素材）
-  - `SMILE Twitter Emotion Dataset.docx`（数据说明）
-  - `smile-annotations-final.csv`（Task 1 数据，1299 行）
-  - `PySpark.png`（官方实验大纲图）
+- 执行环境：conda `CDS527`（PySpark 3.1.2，Java 11）
+- Task 1 数据：`smile-annotations-final.csv`
+- Task 2 case：`Google.docx`
+- 官方路线图：`PySpark.png`
 
-## 导航
-- [[当前状态]]
-- [[实验协议]]
-- [[任务笔记 - Task1 内容梳理]]
-- [[数据说明]]
-- [[结果索引]]
-- [[问题与坑点]]
-- [[下一步]]
-- [[项目规范 - 执行流程]]
-- [[任务笔记 - 阅读作业要求]]
-- [[常用命令]]
-- [[会话日志]]
+## 当前统一口径
+- 原始 CSV：`1299` 行
+- 建模样本：按 `text` 去重后 `1298` 行
+- 固定切分：`sampleBy(label, 0.8, seed=42)` 得到近似分层的 `1032 / 266`
+- 主指标：`macro-F1`
+- baseline：`TF-IDF unigram + Logistic Regression`，`macro-F1 = 0.2337`
+- 当前全项目最优：`A4 Light cleaning only + TF-IDF + class weight + LR`，`macro-F1 = 0.4465`
 
-## 当前目标
-- **Task 1 Notebook 主线实验全部完成** ✅
-- **Task 2 / 合规文档主体已完成**：`Group_X.report.docx`、`Group_X.gai.docx`、`work_distribution.docx` ✅
-- **正式 PPT 已存在**：根目录下 `CDS527.pptx` 与 `Text_Classification_and_Google_Strategic_Audit.pptx` 为同一份文件的重复副本
-- 当前收尾重点：
-  - 统一最终提交文件命名
-  - 同步 Claude Code 的使用记录到过程文档与 GAI 声明
-  - 决定是否将 `Group_X.code.ipynb` 重新执行并以带输出状态保存
+## Task 1 结果摘要
 
-## 执行总纲（Step 进度）
-| Step | 内容 | 状态 |
-|------|------|------|
-| 1 | 项目现状检查 | ✅ 完成 |
-| 2 | 文档体系梳理与补齐 | ✅ 完成 |
-| 3 | 环境检查 | ✅ 完成 |
-| 4 | 数据读取与审查 | ✅ 完成 |
-| 5 | 固定实验协议 | ✅ 完成 |
-| 6 | Baseline（TF-IDF + LR，macro-F1=0.2337） | ✅ 完成 |
-| 7 | 模型比较（Section 2，最优 CNB=0.3332） | ✅ 完成 |
-| 8 | 表示方法比较（Section 3，固定 LR 设置下 BOW 系列无差异） | ✅ 完成 |
-| 9 | 改进方法与深度分析（Section 4，最优 LR+Weight rp=0.5，macro-F1=0.3453） | ✅ 完成 |
-
-## 最终实验结果摘要
 | Section | 最佳配置 | macro-F1 |
-|---------|---------|---------|
+|---------|---------|---------:|
 | S1 Baseline | TF-IDF unigram + LR | 0.2337 |
-| S2 Model Comparison | TF-IDF unigram + CNB | 0.3332 |
-| S3 Repr Comparison | 固定 LR 下 BOW 系列无差异 | 0.2337 |
-| **S4 Improvement** | **LR + 逆频率类别权重 (rp=0.5)** | **0.3453** ← 全项目最优 |
+| S2 Model Comparison | Complement NaiveBayes | 0.3332 |
+| S3 Part B best | BERT embedding + LR | 0.3420 |
+| S4 original best | LR + class weight (rp=0.5) | 0.3453 |
+| **Current overall best** | **A4 Light cleaning only + TF-IDF + class weight + LR** | **0.4465** |
 
-## 当前目录结构
-- `文档/`：Obsidian 主笔记区
-- `日志/`：过程日志（`会话日志.md`）
-- `输出/figures/`：10 张可视化图（fig1–fig10）
-- `输出/reports/`：全部文本报告（EDA + S1–S4）
-- `输出/data/`：3 个 CSV（S2/S3/S4 结果）
-- `工作区/Group_X.code.ipynb`：Task 1 主 Notebook（Section 0–9 全部完成）
-- `CDS527.pptx` / `Text_Classification_and_Google_Strategic_Audit.pptx`：当前已生成的正式 PPT 成品（内容相同）
-- `tmp/docs/`：DOCX 临时提取结果
+## 当前项目状态
+- Task 1 主线实验完成
+- Task 1 补做实验完成：`GloVe`、`BERT embedding`、`MLP + Word2Vec`、`ablation study`
+- 输出目录已按 `sections/`、`tables/` 重整
+- sanity check 已完成，未发现明显标签映射错误、切分错误、评估错误或直接泄漏证据
+- 文本文档已按最新结果同步
+
+## 主要目录
+- `文档/`：项目笔记、实验协议、总结材料
+- `工作区/Group_X.code.ipynb`：Task 1 notebook
+- `工作区/Group_X_PPT_outline.md`：当前权威 PPT 大纲
+- `工作区/Group_X.report.docx`：Task 2 report
+- `工作区/Group_X.gai.docx`：GAI 声明
+- `输出/`：图表、结果表、报告文本、section 索引
+- `二次核对项目/`：二次核对、sanity check、PPT 同步文档
+
+## 推荐入口
+- `文档/结果索引.md`
+- `文档/当前状态.md`
+- `文档/结论层级汇总.md`
+- `二次核对项目/PPT大纲-修订版-含文件映射.md`
+- `二次核对项目/sanity_check_summary.md`

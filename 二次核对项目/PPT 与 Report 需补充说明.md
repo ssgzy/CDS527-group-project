@@ -35,10 +35,13 @@
 - accuracy 会天然虚高
 - 只有 macro-F1 才能公平反映少数类表现
 
-### 5. 为什么最终最佳方案是 LR + class weights
+### 5. 为什么最终最佳方案不能停在 LR + class weights
 
 - S3 已经证明：在固定 LR 且不处理不平衡时，换特征没有突破
-- 因此把改进重点放到 class weighting 是有证据支持的，而不是盲调
+- 因此原主线先转向 class weighting，这是有证据支持的，而不是盲调
+- 但补做 ablation 后还需要再补一句：
+  - 最终最优不是停在 weighted LR `0.3453`
+  - 而是 `A4 Light cleaning only + TF-IDF + class weight + LR = 0.4465`
 
 ---
 
@@ -60,37 +63,27 @@
 1. baseline 暴露了多数类偏置
 2. S2 证明换分类器能带来提升，CNB 最优
 3. S3 证明在固定 LR 下换表示无效
-4. 因此 S4 转向 class weighting，得到全项目最优 `0.3453`
+4. 因此 S4 先转向 class weighting，得到原主线最优 `0.3453`
+5. 之后通过 ablation 发现最终全项目最优 `A4 = 0.4465`
 
 ---
 
 ## 已发现的 PPT / 大纲不同步点
 
-### 1. `工作区/Group_X_PPT_outline.md` 不是最终事实来源
+### 1. 旧版 `工作区/Group_X_PPT_outline.md` 不是最终事实来源
 
-- 该大纲里有旧数字，不能再直接拿来讲
+- 旧版大纲里有旧数字，不能再直接拿来讲
 - 已发现的旧值包括：
   - S2 中 `DT / RF / OVR-SVC` 的数值是过期的
   - S3 中 `Word2Vec` 被写成 `0.2337`，实际应为 `0.1889`
   - S4 中多个 `regParam` 对应值过期
 
-### 2. 最终 PPT 成品大体已修正
+### 2. 当前应以新的文本大纲为权威来源
 
-- 抽查 `CDS527.pptx` 可见：
-  - S2 页核心数值已正确
-  - S3 页 `Word2Vec = 0.1889` 已正确
-  - S4 页 `0.3453` 和调参图已正确
-
-### 3. 最终 PPT 仍有 1 处需要修正
-
-- `Under the Hood: Diagnostics & Trade-offs` 这一页写了：
-  - `angry <-> sad are the most confused pair`
-- 但根据 `report_s4_deep_analysis.txt` 和混淆矩阵，真实 Top pairs 是：
-  - `happy → surprise` = 18
-  - `happy → sad` = 8
-  - `happy → disgust` = 5
-  - `angry → happy` = 5
-- 因此这页结论应改，不然会被质疑“图和字不一致”
+- 当前权威版本应是：
+  - `二次核对项目/PPT大纲-修订版-含文件映射.md`
+  - 同步后的 `工作区/Group_X_PPT_outline.md`
+- 如果二进制 PPT 还未重导出，答辩与修改都应先以这两份文本大纲为准
 
 ---
 
@@ -98,7 +91,7 @@
 
 - “The workflow was not random. We deliberately separated model comparison from representation comparison, and the results showed that class imbalance, not feature swapping, was the dominant bottleneck.”
 - “Our baseline was intentionally simple and standard. Its failure was analytically useful, because it told us exactly where the real problem was.”
-- “The final improvement was therefore motivated by evidence from earlier sections, not by arbitrary tuning.”
+- “The final improvement was therefore motivated by evidence from earlier sections, and the final best configuration was only confirmed after ablation rather than assumed in advance.”
 
 ---
 

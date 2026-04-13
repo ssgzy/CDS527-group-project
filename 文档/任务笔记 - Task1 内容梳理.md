@@ -197,8 +197,8 @@
 - 更准确地说：
   - **Section 1：已完整测试**
   - **Section 2：已完整测试**
-  - **Section 3：Part A 已完整测试；Part B 明确未测试**
-  - **Section 4：只测试了其中一部分；不是图里列的每个方法都跑过**
+  - **Section 3：Part A 与 Part B 现均已完成**
+  - **Section 4：原主线完成后，又补做了 MLP + Word2Vec 与 ablation**
 
 ### 逐项对照
 
@@ -214,16 +214,16 @@
 | Section 3 Part A | TF-IDF (1,2-gram) + LR | ✅ 已测试 | `输出/reports/report_s3_R2.txt` |
 | Section 3 Part A | CountVectorizer + LR | ✅ 已测试 | `输出/reports/report_s3_R3.txt` |
 | Section 3 Part A | Word2Vec + LR | ✅ 已测试 | `输出/reports/report_s3_R4.txt` |
-| Section 3 Part B | GloVe + LR | ❌ 未测试 | 已在本 note 和 [[结果索引]] 中明确标记为不纳入 |
-| Section 3 Part B | BERT embedding + LR | ❌ 未测试 | 已在本 note 和 [[结果索引]] 中明确标记为不纳入 |
+| Section 3 Part B | GloVe + LR | ✅ 已测试 | `输出/reports/report_s3B_GloVe.txt` |
+| Section 3 Part B | BERT embedding + LR | ✅ 已测试 | `输出/reports/report_s3B_BERT.txt` |
 | Section 4 Part A | Fine-grained text cleaning | ⚠️ 仅做了统一清洗，不算单独对比实验 | Notebook 中有 `clean_text()`，但没有“清洗前后/不同清洗策略”的独立比较结果 |
 | Section 4 Part A | Class weighting / imbalance handling | ✅ 已测试 | `输出/reports/report_s4_summary.txt` 与各 `report_s4_LR_weight_*.txt` |
 | Section 4 Part A | Hyperparameter tuning | ✅ 已测试 | `regParam ∈ {0.01, 0.05, 0.1, 0.5, 1.0}`，见 `results_s4_improvement.csv` |
-| Section 4 Part A | Optional MLP + Word2Vec | ❌ 未测试 | Notebook 仅导入了 `MultilayerPerceptronClassifier`，无对应结果文件 |
+| Section 4 Part A | Optional MLP + Word2Vec | ✅ 已测试 | `输出/reports/report_s4_MLP_word2vec.txt` |
 | Section 4 Part B | Confusion matrix | ✅ 已测试 | `输出/figures/fig9_confusion_matrix.png`；`report_s4_deep_analysis.txt` |
 | Section 4 Part B | Per-class precision / recall / F1 | ✅ 已测试 | `report_s4_deep_analysis.txt`；`fig10_per_class_and_time.png` |
 | Section 4 Part B | Hardest class pairs | ✅ 已测试 | `report_s4_deep_analysis.txt` |
-| Section 4 Part B | Ablation study | ❌ 未测试 | Notebook 与输出目录中无 ablation 对比结果 |
+| Section 4 Part B | Ablation study | ✅ 已测试 | `输出/reports/report_s4_ablation_summary.txt` |
 | Section 4 Part B | Training time vs performance trade-off | ✅ 已测试 | `fig10_per_class_and_time.png` |
 
 ### 你现在这份项目最准确的说法
@@ -232,7 +232,7 @@
   - Section 2 全部
   - Section 3 Part A 全部
   - Section 4 中的 `class weighting`、`hyperparameter tuning`、`confusion matrix`、`per-class metrics`、`hardest class pairs`、`training time vs performance`
-- 你**明确没跑**：
+- 你此前没跑、但现在已经补齐：
   - Section 3 Part B 的 `GloVe`
   - Section 3 Part B 的 `BERT embedding`
   - Section 4 的 `Optional MLP + Word2Vec`
